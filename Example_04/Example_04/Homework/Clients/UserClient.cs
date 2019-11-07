@@ -7,34 +7,29 @@ namespace Example_04.Homework.Clients
 {
     public class UserClient
     {
-        private FirstOrmAdapter firstAdapter;
-        private SecondOrmAdapter secondAdapter;
-
-        private IFirstOrm<DbUserEntity> _firstOrm1;
-        private IFirstOrm<DbUserInfoEntity> _firstOrm2;
-
-        private ISecondOrm _secondOrm;
+        private readonly FirstOrmAdapter firstAdapter;
+        private readonly SecondOrmAdapter secondAdapter;
 
         private bool _useFirstOrm = true;
-        private IOrmAdapter _ormAdapter => _useFirstOrm ? firstAdapter as IOrmAdapter : secondAdapter;
+        private IOrmAdapter OrmAdapter => _useFirstOrm ? firstAdapter as IOrmAdapter : secondAdapter;
 
         public (DbUserEntity, DbUserInfoEntity) Get(int userId)
         {
-            var user = _ormAdapter.GetDbUserEntity(userId);
-            var userInfo = _ormAdapter.GetDbUserInfoEntity(userId);
+            var user = OrmAdapter.GetDbUserEntity(userId);
+            var userInfo = OrmAdapter.GetDbUserInfoEntity(userId);
             return (user, userInfo);
         }
 
         public void Add(DbUserEntity user, DbUserInfoEntity userInfo)
         {
-            _ormAdapter.AddDbUserEntity(user);
-            _ormAdapter.AddDbUserInfoEntity(userInfo);
+            OrmAdapter.AddDbUserEntity(user);
+            OrmAdapter.AddDbUserInfoEntity(userInfo);
         }
 
         public void Remove(int userId)
         {
-            _ormAdapter.RemoveDbUserInfoEntity(userId);
-            _ormAdapter.RemoveDbUserEntity(userId);
+            OrmAdapter.RemoveDbUserInfoEntity(userId);
+            OrmAdapter.RemoveDbUserEntity(userId);
             
         }
 
