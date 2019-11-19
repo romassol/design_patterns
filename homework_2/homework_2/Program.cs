@@ -1,4 +1,6 @@
-﻿namespace homework_2
+﻿using System.Net;
+
+namespace homework_2
 {
     public interface ICarFactory
     {
@@ -98,6 +100,21 @@
     {
         public static void Main(string[] args)
         {
+        }
+        public static void AbstractFactoryExample()
+        {
+            var bmw = new BMW();
+            
+            var bmwEngine = bmw.CreateEngine();
+            var bmwCarcass = bmw.CreateCarcass();
+            var bmwCabin = bmw.CreateCabin();
+            
+            
+            var audi = new AUDI();
+            
+            var audiEngine = audi.CreateEngine();
+            var audiCarcass = audi.CreateCarcass();
+            var audiCabin = audi.CreateCabin();
         }
     }
 }
