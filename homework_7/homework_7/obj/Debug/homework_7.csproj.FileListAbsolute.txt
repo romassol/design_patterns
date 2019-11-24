@@ -1,0 +1,6 @@
+/Users/romass/study/design_patterns/homework_7/homework_7/bin/Debug/homework_7.exe
+/Users/romass/study/design_patterns/homework_7/homework_7/bin/Debug/homework_7.pdb
+/Users/romass/study/design_patterns/homework_7/homework_7/obj/Debug/homework_7.csprojAssemblyReference.cache
+/Users/romass/study/design_patterns/homework_7/homework_7/obj/Debug/homework_7.csproj.CoreCompileInputs.cache
+/Users/romass/study/design_patterns/homework_7/homework_7/obj/Debug/homework_7.exe
+/Users/romass/study/design_patterns/homework_7/homework_7/obj/Debug/homework_7.pdb
